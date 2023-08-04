@@ -239,16 +239,7 @@ At the time the player requests the jump, not the jump itself
 
 
 ```
-{
-	"timestamp": "2020-04-20T09:30:58Z",
-	"event": "CarrierJumpRequest",
-	"CarrierID": 3700005632,
-	"SystemName": "Paesui Xena",
-	"Body": "Paesui Xena A",
-	"SystemAddress": 7269634680241,
-	"BodyID": 1,
-	"DepartureTime":"2020-04-20T09:45:00Z"
-}
+{ "timestamp":"2020-04-20T09:30:58Z", "event":"CarrierJumpRequest", "CarrierID":3700005632, "SystemName":"Paesui Xena", "Body":"Paesui Xena A", "SystemAddress":7269634680241, "BodyID":1, "DepartureTime":"2020-04-20T09:45:00Z",  }
 ```
 
 ### CarrierDecommission

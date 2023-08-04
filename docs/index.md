@@ -10,26 +10,195 @@ The new Player Journal provides a stream of information about gameplay events wh
 
 A short example of a player journal file (_**out of date, some events may have additional data**_):
 
+{  "timestamp":"2016-06-10T14:31:00Z", "event":"FileHeader", "part":1, "gameversion":"2.2", "build":"r113684 " },
 
 ```
-{"timestamp":"2016-06-10T14:31:00Z", "event":"FileHeader", "part":1, "gameversion":"2.2", "build":"r113684 " },
-{"timestamp":"2016-06-10T14:32:03Z", "event":"LoadGame", "Commander":"HRC1", "Ship":"SideWinder", "ShipID":1, "GameMode":"Open", "Credits":600120, "Loan":0  }
-{"timestamp":"2016-06-10T14:32:03Z", "event":"Rank", "Combat":0, "Trade":0, "Explore":1, "Empire":0, "Federation":0, "CQC":0 }
-{"timestamp":"2016-06-10T14:32:03Z", "event":"Progress", "Combat":0, "Trade":0, "Explore":73, "Empire":0, "Federation":0, "CQC":0 }
-{"timestamp":"2016-06-10T14:32:15Z", "event":"Location", "StarSystem":"Asellus 	Primus", "StarPos":[-23.938,40.875,-1.344] }
-{"timestamp":"2016-06-10T14:32:16Z", "event":"Docked", "StationName":"Beagle 2 Landing", "StationType":"Coriolis" }
-{"timestamp":"2016-06-10T14:32:38Z", "event":"RefuelAll", "Cost":12, "Amount":0.234493 }
-{"timestamp":"2016-06-10T14:34:25Z", "event":"Undocked", "StationName":"Beagle 	2 Landing", "StationType":"Coriolis" }
-{"timestamp":"2016-06-10T14:35:00Z", "event":"FSDJump", "StarSystem":"HIP 78085", "StarPos":[120.250,40.219,268.594], "JumpDist":36.034 }
-{"timestamp":"2016-06-10T14:35:22Z", "event":"Scan", "BodyName":"HIP 78085 A", "StarType":"G" }
-{"timestamp":"2016-06-10T14:36:10Z", "event":"FSDJump", "StarSystem":"Praea Euq NW-W b1-3", "StarPos":[120.719,34.188,271.750], "JumpDist":6.823 }
-{"timestamp":"2016-06-10T14:36:42Z", "event":"Scan", "BodyName":"Praea 	Euq NW-W b1-3", "StarType":"M" }
-{"timestamp":"2016-06-10T14:38:50Z", "event":"Scan", "BodyName":"Praea 	Euq NW-W b1-3 3", "Description":"Icy body with 	neon rich atmosphere and major water geysers volcanism" }
-{"timestamp":"2016-06-10T14:39:08Z", "event":"Scan", "BodyName":"Praea 	Euq NW-W b1-3 3 a", "Description":"Tidally locked Icy body" }
-{"timestamp":"2016-06-10T14:41:03Z", "event":"FSDJump", "StarSystem":"Asellus Primus", "StarPos":[-23.938,40.875,-1.344], "JumpDist":39.112 }
-{"timestamp":"2016-06-10T14:41:26Z", "event":"SupercruiseExit", "StarSystem":"Asellus 	Primus", "Body":"Beagle 2 Landing" }
-{"timestamp":"2016-06-10T14:41:29Z", "event":"Docked", "StationName":"Beagle 2 Landing", "StationType":"Coriolis" }
-{"timestamp":"2016-06-10T14:41:58Z", "event":"SellExplorationData", "Systems":[ "HIP 78085", "Praea Euq NW-W b1-3" ], "Discovered":[ "HIP 78085 A", "Praea Euq 	NW-W b1-3", "Praea Euq NW-W b1-3 3 a", "Praea Euq NW-W b1-3 3" ], "BaseValue":10822, "Bonus":3959 }
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "LoadGame",
+	"Commander": "HRC1",
+	"Ship": "SideWinder",
+	"ShipID": 1,
+	"GameMode": "Open",
+	"Credits": 600120,
+	"Loan": 0
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "Rank",
+	"Combat": 0,
+	"Trade": 0,
+	"Explore": 1,
+	"Empire": 0,
+	"Federation": 0,
+	"CQC": 0
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "Progress",
+	"Combat": 0,
+	"Trade": 0,
+	"Explore": 73,
+	"Empire": 0,
+	"Federation": 0,
+	"CQC": 0
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:32:15Z",
+	"event": "Location",
+	"StarSystem": "Asellus Primus",
+	"StarPos": [
+		-23.938,
+		40.875,
+		-1.344
+	]
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:32:16Z",
+	"event": "Docked",
+	"StationName": "Beagle 2 Landing",
+	"StationType": "Coriolis"
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:32:38Z",
+	"event": "RefuelAll",
+	"Cost": 12,
+	"Amount": 0.234493
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:34:25Z",
+	"event": "Undocked",
+	"StationName": "Beagle 2 Landing",
+	"StationType": "Coriolis"
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:35:00Z",
+	"event": "FSDJump",
+	"StarSystem": "HIP 78085",
+	"StarPos": [
+		120.25,
+		40.219,
+		268.594
+	],
+	"JumpDist": 36.034
+}
+```
+
+```
+{ ""timestamp":"2016-06-10T14:35:22Z", event":"Scan", "BodyName":"HIP 78085 A", "StarType":"G" }
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:36:10Z",
+	"event": "FSDJump",
+	"StarSystem": "Praea Euq NW-W b1-3",
+	"StarPos": [
+		120.719,
+		34.188,
+		271.75
+	],
+	"JumpDist": 6.823
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:36:42Z",
+	"event": "Scan",
+	"BodyName": "Praea Euq NW-W b1-3",
+	"StarType": "M"
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:38:50Z",
+	"event": "Scan",
+	"BodyName": "Praea Euq NW-W b1-3 3",
+	"Description": "Icy body with neon rich atmosphere and major water geysers volcanism"
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:39:08Z",
+	"event": "Scan",
+	"BodyName": "Praea Euq NW-W b1-3 3 a",
+	"Description": "Tidally locked Icy body"
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:41:03Z",
+	"event": "FSDJump",
+	"StarSystem": "Asellus Primus",
+	"StarPos": [
+		-23.938,
+		40.875,
+		-1.344
+	],
+	"JumpDist": 39.112
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:41:26Z",
+	"event": "SupercruiseExit",
+	"StarSystem": "Asellus Primus",
+	"Body": "Beagle 2 Landing"
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:41:29Z",
+	"event": "Docked",
+	"StationName": "Beagle 2 Landing",
+	"StationType": "Coriolis"
+}
+```
+
+```
+{
+	"timestamp": "2016-06-10T14:41:58Z",
+	"event": "SellExplorationData",
+	"Systems": [
+		"HIP 78085",
+		"Praea Euq NW-W b1-3"
+	],
+	"Discovered": [
+		"HIP 78085 A",
+		"Praea Euq NW-W b1-3",
+		"Praea Euq NW-W b1-3 3 a",
+		"Praea Euq NW-W b1-3 3"
+	],
+	"BaseValue": 10822,
+	"Bonus": 3959
+}
 ```
 
 ### ChangeLog
@@ -38,16 +207,16 @@ A short example of a player journal file (_**out of date, some events may have a
 
 **Changes for Odyssey up to update14 (May 2023)**
 
-- The “CarrierJump” event is now written to the journal again on a carrier hyperspace jump instead of it writing a “Location” event.
-- ‘MissionFailed’ event is now written when the mission enters the failed state instead of when the mission is abandoned in the transactions panel.
-- Ensured StationState is documented in the “Docked” event
-- “StartJump” now sent for jumps while in a taxi, new field added to differentiate between a taxi jump and a jump in a pleyers own ship.
-- Added the param “IsThargoid” to the events “Interdicted” and “EscapeInterdiction”
-- Added new event “SupercruiseDestinationDrop” which is sent when dropping out of supercruise at a targeted destination.
-- Added Thargoid war data to the events “FSDJump”, “CarrierJump” and “Location”
-- Added documentation for the ClearImpound event(no change, was just missing from documentation)
-- Added organic variant to the “ScanOrganic” and “SellOrganicData” events
-- Fixed the “FactionKillBond” event sometimes not getting written
+- The "CarrierJump" event is now written to the journal again on a carrier hyperspace jump instead of it writing a "Location" event. 
+- 'MissionFailed' event is now written when the mission enters the failed state instead of when the mission is abandoned in the transactions panel. 
+- Ensured StationState is documented in the "Docked" event 
+- "StartJump" now sent for jumps while in a taxi, new field added to differentiate between a taxi jump and a jump in a pleyers own ship. 
+- Added the param "IsThargoid" to the events "Interdicted" and "EscapeInterdiction" 
+- Added new event "SupercruiseDestinationDrop" which is sent when dropping out of supercruise at a targeted destination. 
+- Added Thargoid war data to the events "FSDJump", "CarrierJump" and "Location" 
+- Added documentation for the ClearImpound event(no change, was just missing from documentation) 
+- Added organic variant to the "ScanOrganic" and "SellOrganicData" events 
+- Fixed the "FactionKillBond" event sometimes not getting written 
 
 
 **Version 36**
@@ -189,23 +358,23 @@ bugs fixed:
 
 **Version 21 – for v3.3 (beta 2)**
 
-**Version 20 – for v3.3 (beta 1) **_(released 30th Oct 2018)_
+**Version 20 – for v3.3 (beta 1) **_(released 30_^_th_^_ Oct 2018)_
 
-**Version 19 – for v3.3 **_(preview released 20th Sept 2018)_
+**Version 19 – for v3.3 **_(preview released 20_^_th_^_ Sept 2018)_
 
-**Version 18 – for v3.0.4** (27th March 2018)
+**Version 18 – for v3.0.4** (27^th^ March 2018)
 
-**Version 17 – for v3.0.3 **(19th March 2018)
+**Version 17 – for v3.0.3 **(19^th^ March 2018)
 
-**Version 16 – for v3.0.2 **(5th March 2018)
+**Version 16 – for v3.0.2 **(5^th^ March 2018)
 
-**Version 15 – for v3.0 – beta3 **(6th Feb 2018)
+**Version 15 – for v3.0 – beta3 **(6^th^ Feb 2018)
 
 **Version 14 – for v3.0 – beta1** (25/Jan/2018)
 
-**Version 13 - In 2.4 Open beta **_(24th Aug 2017)_
+**Version 13 - In 2.4 Open beta **_(24_^_th_^_ Aug 2017)_
 
-**Version 12 - In 2.4 beta1 **_(17th Aug 2017)_
+**Version 12 - In 2.4 beta1 **_(17_^_th_^_ Aug 2017)_
 
 **Version 11**_published 26/Jun/2017_
 

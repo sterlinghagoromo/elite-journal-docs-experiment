@@ -29,13 +29,19 @@ Parameters:
 
 LegalState: one of:
 
-- "Clean"
-- "IllegalCargo"
-- "Speeding"
-- "Wanted"
-- "Hostile"
-- "PassengerWanted"
-- "Warrant"
+"Clean",
+
+"IllegalCargo",
+
+"Speeding",
+
+"Wanted",
+
+"Hostile",
+
+"PassengerWanted",
+
+"Warrant"
 
 Additional values when on foot:
 
@@ -48,65 +54,115 @@ Additional values when on foot:
 
 Flags:
 
-Bit|Value|Hex|Meaning
-|-:||
-0|1|0000 0001|Docked, (on a landing pad)
-1|2|0000 0002|Landed, (on planet surface)
-2|4|0000 0004|Landing Gear Down
-3|8|0000 0008|Shields Up
-4|16|0000 0010|Supercruise
-5|32|0000 0020|FlightAssist Off
-6|64|0000 0040|Hardpoints Deployed
-7|128|0000 0080|In Wing
-8|256|0000 0100|LightsOn
-9|512|0000 0200|Cargo Scoop Deployed
-10|1024|0000 0400|Silent Running,
-11|2048|0000 0800|Scooping Fuel
-12|4096|0000 1000|Srv Handbrake
-13|8192|0000 2000|Srv using Turret view
-14|16384|0000 4000|Srv Turret retracted (close to ship)
-15|32768|0000 8000|Srv DriveAssist
-16|65536|0001 0000|Fsd MassLocked
-17|131072|0002 0000|Fsd Charging
-18|262144|0004 0000|Fsd Cooldown
-19|524288|0008 0000|Low Fuel ( &lt; 25% )
-20|1048576|0010 0000|Over Heating ( &gt; 100% )
-21|2097152|0020 0000|Has Lat Long
-22|4194304|0040 0000|IsInDanger
-23|8388608|0080 0000|Being Interdicted
-24|16777216|0100 0000|In MainShip
-25|33554432|0200 0000|In Fighter
-26|67108864|0400 0000|In SRV
-27|134217728|0800 0000|Hud in Analysis mode
-28|268435456|1000 0000|Night Vision
-29|536870912|2000 0000|Altitude from Average radius
-30‭|1073741824‬|4000 0000|fsdJump
-31|2147483648|8000 0000|srvHighBeam
+BitValueHexMeaning
+
+010000 0001Docked, (on a landing pad)
+
+120000 0002Landed, (on planet surface)
+
+240000 0004Landing Gear Down
+
+380000 0008Shields Up
+
+4160000 0010Supercruise
+
+5320000 0020FlightAssist Off
+
+6640000 0040Hardpoints Deployed
+
+71280000 0080In Wing
+
+82560000 0100LightsOn
+
+95120000 0200Cargo Scoop Deployed
+
+1010240000 0400Silent Running,
+
+1120480000 0800Scooping Fuel
+
+1240960000 1000Srv Handbrake
+
+1381920000 2000Srv using Turret view
+
+14163840000 4000Srv Turret retracted (close to ship)
+
+15327680000 8000Srv DriveAssist
+
+16655360001 0000Fsd MassLocked
+
+171310720002 0000Fsd Charging
+
+182621440004 0000Fsd Cooldown
+
+195242880008 0000Low Fuel ( &lt; 25% )
+
+2010485760010 0000Over Heating ( &gt; 100% )
+
+2120971520020 0000Has Lat Long
+
+2241943040040 0000IsInDanger
+
+2383886080080 0000Being Interdicted
+
+24167772160100 0000In MainShip
+
+25335544320200 0000In Fighter
+
+26671088640400 0000In SRV
+
+271342177280800 0000Hud in Analysis mode
+
+282684354561000 0000Night Vision
+
+295368709122000 0000Altitude from Average radius
+
+30‭1073741824‬4000 0000fsdJump
+
+3121474836488000 0000srvHighBeam
 
 **Flags2 bits:**
 
-Bit|Value|Hex|Meaning
-|-:||
-0|1|0001|OnFoot
-1|2|0002|InTaxi (or dropship/shuttle)
-2|4|0004|InMulticrew (ie in someone else's ship)
-3|8|0008|OnFootInStation
-4|16|0010|OnFootOnPlanet
-5|32|0020|AimDownSight
-6|64|0040|LowOxygen
-7|128|0080|LowHealth
-8|256|0100|Cold
-9|512|0200|Hot
-10|1024|0400|VeryCold
-11|2048|0800|VeryHot
-12|4096|1000|Glide Mode
-13|8192|2000|OnFootInHangar
-14|16384|4000|OnFootSocialSpace
-15|32768|8000|OnFootExterior
-16|65536|0001 0000|BreathableAtmosphere
-17|131072|0002 0000|Telepresence Multicrew
-18|262144|0004 0000|Physical Multicrew
-19|524288|0008 0000|Fsd hyperdrive charging
+Bitvaluehexmeaning
+
+010001OnFoot
+
+120002InTaxi (or dropship/shuttle)
+
+240004InMulticrew (ie in someone else's ship)
+
+380008OnFootInStation
+
+4160010OnFootOnPlanet
+
+5320020AimDownSight
+
+6640040LowOxygen
+
+71280080LowHealth
+
+82560100Cold
+
+95120200Hot
+
+1010240400VeryCold
+
+1120480800VeryHot
+
+1240961000Glide Mode
+
+1381922000OnFootInHangar
+
+14163844000OnFootSocialSpace
+
+15327688000OnFootExterior
+
+16655360001 0001BreathableAtmosphere
+
+171310720002 0000Telepresence Multicrew
+
+182621440004 0000Physical Multicrew
+
+195242880008 0000Fsd hyperdrive charging
 
 Examples:
 
@@ -156,20 +212,29 @@ In the first example above 16842765 (0x0101000d) has flags 24, 16, 3, 2, 0: In m
 
 GuiFocus values:
 
-Value|Description
--:|
-0|NoFocus
-1|InternalPanel (right hand side)
-2|ExternalPanel (left hand side)
-3|CommsPanel (top)
-4|RolePanel (bottom)
-5|StationServices
-6|GalaxyMap
-7|SystemMap
-8|Orrery
-9|FSS mode
-10|SAA mode
-11|Codex
+0NoFocus
+
+1InternalPanel (right hand side)
+
+2ExternalPanel (left hand side)
+
+3CommsPanel (top)
+
+4RolePanel (bottom)
+
+5StationServices
+
+6GalaxyMap
+
+7SystemMap
+
+8Orrery
+
+9FSS mode
+
+10SAA mode
+
+11Codex
 
 The latitude or longitude need to change by 0.02 degrees to trigger an update when flying, or by 0.0005 degrees when in the SRV
 

@@ -134,6 +134,7 @@ Parameters:
 
 - Crew: player's commander name 
 - Telepresence: (bool) (only from Odyssey build) 
+-  
 
 
 ### CrewMemberQuits
@@ -144,6 +145,7 @@ Parameters:
 
 - Crew: player's commander name 
 - Telepresence: (bool) (only from Odyssey build) 
+-  
 
 
 ### CrewMemberRoleChange
@@ -155,6 +157,7 @@ Parameters:
 - Crew: player name 
 - Role: selected role 
 - Telepresence: (bool) (only from Odyssey build) 
+-  
 
 
 Example:
@@ -246,6 +249,7 @@ Parameters:
 
 - OnCrime: (bool) true if crew disbanded as a result of a crime in a lawful session 
 - Telepresence: (bool) (only from Odyssey build) 
+-  
 
 
 ### FighterRebuilt
@@ -317,6 +321,7 @@ Parameters:
 
 - Captain: Helm player's commander name 
 - Telepresence: (bool) (only from Odyssey build) 
+-  
 
 
 ### KickCrewMember
@@ -328,6 +333,7 @@ Parameters:
 - Crew: player's commander name 
 - OnCrime: (bool) true if player is automatically kicked for committing a crime in a lawful session 
 - Telepresence: (bool) (only from Odyssey build) 
+-  
 
 
 ### LaunchDrone
@@ -382,28 +388,52 @@ Parameters: None
 
 Example of ModulesInfo file:
 
-```
 { "timestamp":"2018-01-10T14:35:08Z", "event":"ModuleInfo", "Modules":[
+
 { "Slot":"MainEngines", "Item":"int_engine_size3_class5", "Power":3.720000, "Priority":0 },
+
 { "Slot":"MediumHardpoint1", "Item":"hpt_beamlaser_turret_medium", "Power":0.930000, "Priority":0 },
+
 { "Slot":"Slot03_Size2", "Item":"int_shieldgenerator_size2_class1", "Power":0.900000, "Priority":2 },
+
 { "Slot":"MediumHardpoint2", "Item":"hpt_multicannon_gimbal_medium", "Power":0.640000, "Priority":0 },
+
 { "Slot":"CargoHatch", "Item":"modularcargobaydoor", "Power":0.600000, "Priority":2 },
+
 { "Slot":"MediumHardpoint3", "Item":"hpt_pulselaser_gimbal_medium", "Power":0.600000, "Priority":0 },
+
 { "Slot":"PowerDistributor", "Item":"int_powerdistributor_size3_class5", "Power":0.600000, "Priority":0 },
+
 { "Slot":"FrameShiftDrive", "Item":"int_hyperdrive_size3_class5", "Power":0.450000, "Priority":0 },
+
 { "Slot":"Slot04_Size2", "Item":"int_fuelscoop_size2_class5", "Power":0.390000, "Priority":0 },
+
 { "Slot":"LifeSupport", "Item":"int_lifesupport_size1_class1", "Power":0.320000, "Priority":2 },
+
 { "Slot":"Slot05_Size2", "Item":"int_buggybay_size2_class1", "Power":0.250000, "Priority":0 },
+
 { "Slot":"Radar", "Item":"int_sensors_size2_class2", "Power":0.210000, "Priority":0 },
+
 { "Slot":"ShipCockpit", "Item":"empire_courier_cockpit", "Power":0.000000 },
+
 { "Slot":"PowerPlant", "Item":"int_powerplant_size4_class2", "Power":0.000000 },
+
 { "Slot":"Slot01_Size3", "Item":"int_cargorack_size2_class1", "Power":0.000000 },
+
 { "Slot":"Slot02_Size3", "Item":"int_cargorack_size2_class1", "Power":0.000000 },
+
 { "Slot":"Slot06_Size1", "Item":"int_stellarbodydiscoveryscanner_standard", "Power":0.000000 },
-{ "Slot":"DataLinkScanner", "Item":"hpt_shipdatalinkscanner", "Power":0, "Priority":0 }
- ] }
+
 ```
+{
+	"Slot": "DataLinkScanner",
+	"Item": "hpt_shipdatalinkscanner",
+	"Power": 0,
+	"Priority": 0
+}
+```
+
+] }
 
 ### Music
 
@@ -484,6 +514,7 @@ Parameters:
 
 - Captain: Helm player's commander name 
 - Telepresence: (bool) (only from Odyssey build) 
+-  
 
 
 ### RebootRepair
@@ -797,19 +828,21 @@ When transferring cargo between ship and fleet carrier, or between ship and SRV
 
 ### SupercruiseDestinationDrop
 
-When dropping out of supercruise at a targeted destination. 
+When dropping out of supercruise at a targeted destination.
 
-- Type: The type fo destination being dropped into
-- Threat: threat level
-- MarketID: (Optional)The market id of the destination if dropping at a market
+Parameters:
+
+- Type: The type fo destination being dropped into 
+- Threat: threat level 
+- MarketID: (Optional)The market id of the destination if dropping at a market 
 
 
 ```
 {
-	"timestamp":"2020-03-12T12:49:54Z",
-	"event":"SupercruiseDestinationDrop",
-	"Type":”Azeban City”,
-	“Threat”:0,
-	“MarketID”:128001536 
+	"timestamp": "2020-03-12T12:49:54Z",
+	"event": "SupercruiseDestinationDrop",
+	"Type": "Azeban City",
+	"Threat": 0,
+	"MarketID": 128001536
 }
 ```

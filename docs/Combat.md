@@ -122,7 +122,7 @@ Parameters:
 
 - Interdictor: interdicting pilot name 
 - IsPlayer: whether player or npc 
-- IsThargoid: whether thargoid or not
+- IsThargoid: whether thargoid or not 
 
 
 Example:
@@ -200,7 +200,7 @@ Parameters:
 - Submitted: true or false 
 -  Interdictor: interdicting pilot name 
 - IsPlayer: whether player or npc 
-- IsThargoid: whether thargoid or not
+- IsThargoid: whether thargoid or not 
 - CombatRank: if player 
 - Faction: if npc 
 - Power: if npc working for a power 
@@ -332,6 +332,7 @@ Parameters:
 
 - ID 
 - SRVType 
+-  
 
 
 ### UnderAttack

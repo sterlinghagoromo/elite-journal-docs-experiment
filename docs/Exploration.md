@@ -68,24 +68,24 @@ This is also generated when scanning a navigation beacon in a populated system, 
 
 Parameters(star)
 
-- ScanType
-- StarSystem: name
-- SystemAddress
-- Bodyname: name of body
-- BodyID
-- DistanceFromArrivalLS
-- StarType: Stellar classification (for a star) – see §15.2
-- Subclass: Star's heat classification 0..9
-- StellarMass: mass as multiple of Sol's mass
-- Radius
-- AbsoluteMagnitude
-- RotationPeriod (seconds)
-- SurfaceTemperature
-- Luminosity – see §15.9
-- Age_MY: age in millions of years
-- Rings: [ array ] – if present
-- WasDiscovered: bool
-- WasMapped: bool
+- ScanType 
+- StarSystem: name 
+- SystemAddress 
+- Bodyname: name of body 
+- BodyID 
+- DistanceFromArrivalLS 
+- StarType: Stellar classification (for a star) – see §15.2 
+- Subclass: Star's heat classification 0..9 
+- StellarMass: mass as multiple of Sol's mass 
+- Radius 
+- AbsoluteMagnitude 
+- RotationPeriod (seconds) 
+- SurfaceTemperature 
+- Luminosity – see §15.9 
+- Age_MY: age in millions of years 
+- Rings: [ array ] – if present 
+- WasDiscovered: bool 
+- WasMapped: bool 
 
 
 Parameters(Planet/Moon)
@@ -95,24 +95,24 @@ Parameters(Planet/Moon)
 - BodyID 
 - Parents: Array of BodyType:BodyID pairs 
 - DistanceFromArrivalLS 
-- TidalLock: 1 if tidally locked
-- TerraformState: Terraformable, Terraforming, Terraformed, or null
-- PlanetClass – see §15.3
-- Atmosphere – see §15.4
-- AtmosphereType
-- AtmosphereComposition: [ array of info ]
-- Volcanism – see §15.5
+- * TidalLock: 1 if tidally locked 
+- * TerraformState: Terraformable, Terraforming, Terraformed, or null 
+- PlanetClass – see §15.3 
+- * Atmosphere – see §15.4 
+- * AtmosphereType 
+- * AtmosphereComposition: [ array of info ] 
+- * Volcanism – see §15.5 
 - SurfaceGravity 
-- SurfaceTemperature
-- SurfacePressure
-- Landable: true (if landable)
-- Materials: JSON array with objects with material names and percentage occurrence
-- Composition: structure containing info on solid composition
+- * SurfaceTemperature 
+- * SurfacePressure 
+- * Landable: true (if landable) 
+- * Materials: JSON array with objects with material names and percentage occurrence 
+- *Composition: structure containing info on solid composition 
 	- Ice 
 	- Rock 
-	- Metal  
-- Rings: [ array of info ] – if rings present
-- ReserveLevel: (Pristine/Major/Common/Low/Depleted) – if rings present
+	- Metal   
+- * Rings: [ array of info ] – if rings present 
+- * ReserveLevel: (Pristine/Major/Common/Low/Depleted) – if rings present 
 
 
 If rotating:

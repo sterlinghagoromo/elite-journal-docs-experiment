@@ -143,52 +143,7 @@ Parameters:
 Example:
 
 ```
-{
-	"timestamp": "2017-02-10T14:25:51Z",
-	"event": "Materials",
-	"Raw": [
-		{
-			"Name": "chromium",
-			"Count": 28
-		},
-		{
-			"Name": "zinc",
-			"Count": 18
-		},
-		{
-			"Name": "iron",
-			"Count": 23
-		},
-		{
-			"Name": "sulphur",
-			"Count": 19
-		}
-	],
-	"Manufactured": [
-		{
-			"Name": "refinedfocuscrystals",
-			"Count": 10
-		},
-		{
-			"Name": "highdensitycomposites",
-			"Count": 3
-		},
-		{
-			"Name": "mechanicalcomponents",
-			"Count": 3
-		}
-	],
-	"Encoded": [
-		{
-			"Name": "emissiondata",
-			"Count": 32
-		},
-		{
-			"Name": "shielddensityreports",
-			"Count": 23
-		}
-	]
-}
+{ "timestamp":"2017-02-10T14:25:51Z", "event":"Materials", "Raw":[ { "Name":"chromium", "Count":28 }, { "Name":"zinc", "Count":18 }, { "Name":"iron", "Count":23 }, { "Name":"sulphur", "Count":19 } ], "Manufactured":[ { "Name":"refinedfocuscrystals", "Count":10 }, { "Name":"highdensitycomposites", "Count":3 }, { "Name":"mechanicalcomponents", "Count":3 } ], "Encoded":[ { "Name":"emissiondata", "Count":32 }, { "Name":"shielddensityreports", "Count":23 } } ] }
 ```
 
 ### Missions
@@ -211,20 +166,7 @@ Each object contains:
 
 
 ```
-{
-	"timestamp": "2017-10-02T10:37:58Z",
-	"event": "Missions",
-	"Active": [
-		{
-			"MissionID": 65380900,
-			"Name": "Mission_Courier_name",
-			"PassengerMission": false,
-			"Expires": 82751
-		}
-	],
-	"Failed": [],
-	"Complete": []
-}
+{ "timestamp":"2017-10-02T10:37:58Z", "event":"Missions", "Active":[ { "MissionID":65380900, "Name":"Mission_Courier_name", "PassengerMission":false, Expires":82751 } ], "Failed":[  ], "Complete":[  ] }
 ```
 
 ### NewCommander

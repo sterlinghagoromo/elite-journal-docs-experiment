@@ -48,7 +48,8 @@ Parameters:
 	- Small 
 	- Medium 
 	- Large 
-- StationState
+- StationState 
+
 
 The 'anonymous docking' protocol comes into effect if you're either Wanted (ie have a local bounty) or have an ActiveFine
 
@@ -148,6 +149,7 @@ Parameters:
 - StationType 
 - MarketID 
 - LandingPad: pad number 
+-  
 
 
 ### DockingRequested
@@ -225,16 +227,17 @@ If the player is pledged to a Power in Powerplay, and the star system is involve
 - Powers: a json array with the names of any powers contesting the system, or the name of the controlling power 
 - PowerplayState: the system state – one of ("InPrepareRadius", "Prepared", "Exploited", "Contested", "Controlled", "Turmoil", "HomeSystem") 
 
+
 If starting in a system affected by the thargoid war:
 
-- ThargoidWar
-	- CurrentState
-	- NextStateSuccess
-	- NextStateFailure
-	- SuccessStateReached
-	- WarProgress:0-1 values
-	- RemainingPorts
-	- EstimatedRemainingTime
+- ThargoidWar 
+	- CurrentState 
+	- NextStateSuccess 
+	- NextStateFailure 
+	- SuccessStateReached 
+	- WarProgress:0-1 values 
+	- RemainingPorts 
+	- EstimatedRemainingTime 
 
 
 Example:
@@ -385,16 +388,13 @@ Example:
 
 Example Conflict data:
 
-```
-"Conflicts": [
-	{
-		"WarType": "war",
-		"Status": "active",
-		"Faction1": {"Name": "Movement for LHS 3163 League","Stake": "","WonDays": 0},
-		"Faction2": {"Name": "Official i Bootis Liberty Party","Stake": "Red Bronco Farms","WonDays": 1}
-	}
-]
-```
+"Conflicts": [{ "WarType": "war", "Status": "active",
+
+"Faction1": {"Name": "Movement for LHS 3163 League","Stake": "","WonDays": 0},
+
+"Faction2": {"Name": "Official i Bootis Liberty Party","Stake": "Red Bronco Farms","WonDays": 1}
+
+}]
 
 ### FSDTarget
 
@@ -502,16 +502,17 @@ If starting docked in a station, also include:
 - StationServices 
 - StationEconomies (Array of (Name,Proportion) pairs ) 
 
+
 If starting in a system affected by the thargoid war:
 
-- ThargoidWar
-	- CurrentState
-	- NextStateSuccess
-	- NextStateFailure
-	- SuccessStateReached
-	- WarProgress:0-1 values
-	- RemainingPorts
-	- EstimatedRemainingTime
+- ThargoidWar 
+	- CurrentState 
+	- NextStateSuccess 
+	- NextStateFailure 
+	- SuccessStateReached 
+	- WarProgress:0-1 values 
+	- RemainingPorts 
+	- EstimatedRemainingTime 
 
 
 New in Odyssey:
@@ -529,7 +530,7 @@ When written: at the start of a Hyperspace or Supercruise jump (start of countdo
 Parameters:
 
 - JumpType: "Hyperspace" or "Supercruise" 
-- Taxi: True if the player is in a taxi
+- Taxi: True if the player is in a taxi 
 - StarSystem: name of destination system (for a hyperspace jump) 
 - SystemAddress 
 - StarClass: star type (only for a hyperspace jump) 
@@ -646,18 +647,18 @@ Parameters:
 
 Example:
 
+{ "timestamp":"2020-04-27T08:02:52Z", "event":"Route", "Route":[
+
+{ "StarSystem":"i Bootis", "SystemAddress":1281787693419, "StarPos":[-22.37500,34.84375,4.00000], "StarClass":"G" },
+
+{ "StarSystem":"Acihaut", "SystemAddress":11665802405289, "StarPos":[-18.50000,25.28125,-4.00000], "StarClass":"M" },
+
+{ "StarSystem":"LHS 455", "SystemAddress":3686969379179, "StarPos":[-16.90625,10.21875,-3.43750], "StarClass":"DQ" },
+
+{ "StarSystem":"SPF-LF 1", "SystemAddress":22661187052961, "StarPos":[2.90625,6.31250,-9.56250], "StarClass":"M" },
+
 ```
-{
-	"timestamp": "2020-04-27T08:02:52Z",
-	"event": "Route",
-	"Route": [
-		{ "StarSystem": "i Bootis", "SystemAddress": 1281787693419, "StarPos": [-22.37500,34.84375,4.00000], "StarClass": "G" },
-		{ "StarSystem": "Acihaut", "SystemAddress": 11665802405289, "StarPos": [-18.50000,25.28125,-4.00000], "StarClass": "M" },
-		{ "StarSystem": "LHS 455", "SystemAddress": 3686969379179, "StarPos": [-16.90625,10.21875,-3.43750], "StarClass": "DQ" },
-		{ "StarSystem": "SPF-LF 1", "SystemAddress": 22661187052961, "StarPos": [2.90625,6.31250,-9.56250], "StarClass": "M" },
-		{ "StarSystem": "Luyten's Star", "SystemAddress":7 268024264097, "StarPos": [6.56250,2.34375,-10.25000], "StarClass": "M" }] }
-	]
-}
+{ "StarSystem":"Luyten's Star", "SystemAddress":7268024264097, "StarPos":[6.56250,2.34375,-10.25000], "StarClass":"M" }] }
 ```
 
 ### NavRouteClear

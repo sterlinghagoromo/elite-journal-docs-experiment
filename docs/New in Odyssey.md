@@ -6,10 +6,10 @@ Lists the contents of the backpack, in a separate _**backpack.json**_ file
 
 Parameters:
 
-- Items: [ ] 
-- Components: [ ] 
-- Consumables: [ ] 
-- Data: [ ] 
+- Items:[} 
+- Components:[] 
+- Consumables:[] 
+- Data:[] 
 
 
 Each list has objects containing:
@@ -26,7 +26,7 @@ This is written when there is any change to the contents of the suit backpack â€
 
 Parameters:
 
-Either Added: [array of items] or Removed: [array of items]
+Either Added:[array of items] or Removed: [array of items]
 
 Where each item contains:
 
@@ -35,6 +35,26 @@ Where each item contains:
 - MissionID (if relevant) 
 - Count 
 - Type 
+
+
+### BackpackMaterials
+
+~~Lists the contents of the backpack, eg when disembarking from ship~~
+
+~~Parameters:~~
+
+- ~~Items:[}~~ 
+- ~~Components:[]~~ 
+- ~~Consumables:[]~~ 
+- ~~Data:[]~~ 
+
+
+~~Each list has objects containing:~~
+
+- ~~Name~~ 
+- ~~OwnerID~~ 
+- ~~MissionID (if relevant)~~ 
+- ~~Count~~ 
 
 
 ### BookDropship
@@ -93,15 +113,7 @@ Parameters:
 	- Count 
 
 
-Category can be one of:
-
-- Encoded
-- Raw
-- Manufactured
-- Item
-- Component
-- Data
-- Consumable
+Category can be one of: Encoded, Raw, Manufactured, Item, Component, Data, Consumable
 
 ```
 {
@@ -207,7 +219,7 @@ Parameters:
 - SuitMods 
 - LoadoutID 
 - LoadoutName 
-- Modules: [ ] 
+- Modules:[] 
 	- SlotName 
 	- ModuleName 
 	- SuitModuleID 
@@ -253,6 +265,7 @@ Parameters:
 - StationName (if at a station) 
 - StationType 
 - MarketID 
+-  
 
 
 ```
@@ -348,16 +361,30 @@ The full list is included in the file **FCMaterials.json**
 
 Example of FCMaterials.json:
 
-```
 { "timestamp":"2022-03-24T11:37:28Z", "event":"FCMaterials", "MarketID":3700020480, "CarrierName":"ralph's carrier", "CarrierID":"VHT-51W", "Items":[
+
 { "id":128961556, "Name":"$californium_name;", "Name_Localised":"Californium", "Price":74000, "Stock":0, "Demand":1 },
+
 { "id":128961524, "Name":"$aerogel_name;", "Name_Localised":"Aerogel", "Price":500, "Stock":26, "Demand":0 },
+
 { "id":128972334, "Name":"$meetingminutes_name;", "Name_Localised":"Meeting Minutes", "Price":1000, "Stock":0, "Demand":1 },
+
 { "id":128962572, "Name":"$rdx_name;", "Name_Localised":"RDX", "Price":387, "Stock":0, "Demand":9 },
+
 { "id":128972304, "Name":"$culinaryrecipes_name;", "Name_Localised":"Culinary Recipes", "Price":1000, "Stock":20, "Demand":0 },
-{ "id": 128961527, "Name": "$chemicalcatalyst_name;", "Name_Localised": "Chemical Catalyst", "Price": 400, "Stock": 18,	"Demand": 0 }
-] }
+
 ```
+{
+	"id": 128961527,
+	"Name": "$chemicalcatalyst_name;",
+	"Name_Localised": "Chemical Catalyst",
+	"Price": 400,
+	"Stock": 18,
+	"Demand": 0
+}
+```
+
+] }
 
 ### LoadoutEquipModule
 
@@ -411,10 +438,10 @@ This event is logged when the player uses the Organic Sampling Tool to scan, log
 
 Parameters:
 
-- ScanType: Log, Sample, or Analyse 
+- ScanType: Log,, Sample, or Analyse 
 - Genus 
 - Species 
-- Variant
+- Variant 
 - SystemAddress 
 - Body 
 
@@ -423,17 +450,17 @@ Example:
 
 ```
 {
-	"timestamp":"2022-12-07T14:27:55Z",
-	"event":"ScanOrganic", 
-	"ScanType":"Analyse",
-	"Genus":"$Codex_Ent_Tubus_Genus_Name;", 
-	"Genus_Localised":"Tubus",
-	"Species":"$Codex_Ent_Tubus_01_Name;",
-	"Species_Localised":"Tubus Conifer",
-	"Variant":"$Codex_Ent_Tubus_01_A_Name;",
-	"Variant_Localised":"Tubus Conifer - Indigo",
-	"SystemAddress":316174882163, 
-	"Body":44
+	"timestamp": "2022-12-07T14:27:55Z",
+	"event": "ScanOrganic",
+	"ScanType": "Analyse",
+	"Genus": "$Codex_Ent_Tubus_Genus_Name;",
+	"Genus_Localised": "Tubus",
+	"Species": "$Codex_Ent_Tubus_01_Name;",
+	"Species_Localised": "Tubus Conifer",
+	"Variant": "$Codex_Ent_Tubus_01_A_Name;",
+	"Variant_Localised": "Tubus Conifer - Indigo",
+	"SystemAddress": 316174882163,
+	"Body": 44
 }
 ```
 
@@ -477,28 +504,28 @@ Parameters:
 - BioData: Array 
 	- Genus 
 	- Species 
-	- Variant
+	- Variant 
 	- Value 
 	- Bonus 
 
 
 ```
 {
-    "timestamp": "2022-12-07T14:44:28Z",
-    "event": "SellOrganicData",
-    "MarketID": 128001536,
-    "BioData": [
-        {
-            "Genus": "$Codex_Ent_Tubus_Genus_Name;",
-            "Genus_Localised": "Tubus",
-            "Species": "$Codex_Ent_Tubus_01_Name;",
-            "Species_Localised": "Tubus Conifer",
-            "Variant": "$Codex_Ent_Tubus_01_A_Name;",
-            "Variant_Localised": "Tubus Conifer - Indigo",
-            "Value": 2415500,
-            "Bonus": 9662000
-        }
-    ]
+	"timestamp": "2022-12-07T14:44:28Z",
+	"event": "SellOrganicData",
+	"MarketID": 128001536,
+	"BioData": [
+		{
+			"Genus": "$Codex_Ent_Tubus_Genus_Name;",
+			"Genus_Localised": "Tubus",
+			"Species": "$Codex_Ent_Tubus_01_Name;",
+			"Species_Localised": "Tubus Conifer",
+			"Variant": "$Codex_Ent_Tubus_01_A_Name;",
+			"Variant_Localised": "Tubus Conifer - Indigo",
+			"Value": 2415500,
+			"Bonus": 9662000
+		}
+	]
 }
 ```
 
@@ -549,10 +576,10 @@ The shiplocker.json file is updated when the locker contents are changed
 
 Parameters:
 
-- Items: [ ] 
-- Components: [ ] 
-- Consumables: [ ] 
-- Data: [ ] 
+- Items:[} 
+- Components:[] 
+- Consumables:[] 
+- Data:[] 
 
 
 Each list has objects containing:
@@ -673,7 +700,7 @@ Parameters:
 	"SuitID": 1702914472756487,
 	"Class": 2,
 	"Cost": 600000,
-	"Resources": [
+	"": [
 		{
 			"Name": "suitschematic",
 			"Name_Localised": "Suit Schematic",

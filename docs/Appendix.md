@@ -79,8 +79,7 @@ Index|Rank
 8|'Viscount '
 9|'Count'
 10|'Earl'
-11|'Marquis'
-12|'Duke'
+11|'Marquis' 12|'Duke'
 13|'Prince'
 14|'King'
 
@@ -98,71 +97,47 @@ Index|Rank
 7|'Legend'
 8|'Elite'
 
-_**Military Ranks**_:
+_**Military Ranks**_: 0=Defenceless, 1=Mostly Defenceless, 2=Rookie, 3=Soldier, 4=Gunslinger, 5=Warrior, 6=Gladiator, 7=Deadeye, 8=Elite
 
-Index|Rank
--:|
-0|Defenceless
-1|Mostly Defenceless
-2|Rookie
-3|Soldier
-4|Gunslinger
-5|Warrior
-6|Gladiator
-7|Deadeye
-8|Elite
-
-_**Exobiologist Ranks**_:
-
-Index|Rank
--:|
-0|Directionless
-1|Mostly Directionless
-2|Compiler
-3|Collector
-4|Cataloguer
-5|Taxonomist
-6|Ecologist
-7|Geneticist
-8|Elite
+_**Exobiologist Ranks**_: 0=Directionless, 1=Mostly Directionless, 2=Compiler, 3=Collector, 4=Cataloguer, 5=Taxonomist, 6=Ecologist, 7=Geneticist, 8=Elite
 
 ### Star Descriptions
 
-- (_Main sequence_:) O B A F G K M L T Y
+(_Main sequence_:) O B A F G K M L T Y
 
-- (_Proto stars_:) TTS AeBe
+(_Proto stars_:) TTS AeBe
 
-- (_Wolf-Rayet_:) W WN WNC WC WO
+(_Wolf-Rayet_:) W WN WNC WC WO
 
-- (_Carbon stars_:) CS C CN CJ CH CHd
+(_Carbon stars_:) CS C CN CJ CH CHd
 
-- MS S
+MS S
 
-- (_white dwarfs_:) D DA DAB DAO DAZ DAV DB DBZ DBV DO DOV DQ DC DCV DX
+(_white dwarfs_:) D DA DAB DAO DAZ DAV DB DBZ DBV DO DOV DQ DC DCV DX
 
-- N (=_Neutron_)
+N (=_Neutron_)
 
-- H (=_Black Hole_)
+H (=_Black Hole_)
 
-- X (=_exotic_)
+X (=_exotic_)
 
-- SupermassiveBlackHole
+SupermassiveBlackHole
 
-- A_BlueWhiteSuperGiant
+A_BlueWhiteSuperGiant
 
-- F_WhiteSuperGiant
+F_WhiteSuperGiant
 
-- M_RedSuperGiant
+M_RedSuperGiant
 
-- M_RedGiant
+M_RedGiant
 
-- K_OrangeGiant
+K_OrangeGiant
 
-- RoguePlanet
+RoguePlanet
 
-- Nebula
+Nebula
 
-- StellarRemnantNebula
+StellarRemnantNebula
 
 ### Planet Classes
 
@@ -242,7 +217,7 @@ Index|Rank
 
 ### Volcanism classes
 
-(all with possible 'minor' or 'major' qualifier)
+- (all with possible 'minor' or 'major' qualifier)
 
 - None
 

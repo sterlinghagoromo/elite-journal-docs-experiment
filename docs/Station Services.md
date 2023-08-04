@@ -104,18 +104,18 @@ Parameters:
 	- PlayerContribution 
 	- NumContributors 
 	- PlayerPercentileBand 
-	- TopTier:  
+	- TopTier:   
 		- Name: string 
 		- Bonus: string 
 
 
-- If the community goal is constructed with a fixed-size top rank (ie max reward for top 10 players)
+If the community goal is constructed with a fixed-size top rank (ie max reward for top 10 players)
 
 	- TopRankSize: (integer) 
 	- PlayerInTopRank: (Boolean) 
 
 
-- If the community goal has reached the first success tier:
+If the community goal has reached the first success tier:
 
 	- TierReached 
 	- Bonus 
@@ -559,14 +559,21 @@ Example: in the journal:
 
 Separate file:
 
-```
 { "timestamp":"2017-10-05T10:10:34Z", "event":"Market", "MarketID":128678535, "StationName":"Black Hide", "StarSystem":"Wyrd", "Items":[
-	{ "id":128049152, "Name":"$platinum_name;", "Name_Localised":"Platinum", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":42220, "MeanPrice":19756, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":9182, "Consumer":true, "Producer":false, "Rare":false },
-	{ "id":128049153, "Name":"$palladium_name;", "Name_Localised":"Palladium", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":13999, "MeanPrice":13244, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":123183, "Consumer":true, "Producer":false, "Rare":false },
-	{ "id":128049154, "Name":"$gold_name;", "Name_Localised":"Gold", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":10831, "MeanPrice":9373, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":151492, "Consumer":true, "Producer":false, "Rare":false },
-	{ "id":128049155, "Name":"$silver_name;", "Name_Localised":"Silver", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":5512, "MeanPrice":4759, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":266258, "Consumer":true, "Producer":false, "Rare":false },   :
-] }
-```
+
+{ "id":128049152, "Name":"$platinum_name;", "Name_Localised":"Platinum", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":42220, "MeanPrice":19756, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":9182, "Consumer":true, "Producer":false, "Rare":false },
+
+{ "id":128049153, "Name":"$palladium_name;", "Name_Localised":"Palladium", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":13999, "MeanPrice":13244, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":123183, "Consumer":true, "Producer":false, "Rare":false },
+
+{ "id":128049154, "Name":"$gold_name;", "Name_Localised":"Gold", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":10831, "MeanPrice":9373, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":151492, "Consumer":true, "Producer":false, "Rare":false },
+
+{ "id":128049155, "Name":"$silver_name;", "Name_Localised":"Silver", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":5512, "MeanPrice":4759, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":266258, "Consumer":true, "Producer":false, "Rare":false },   :
+
+_: (about 100 lines later)_
+
+:
+
+]}
 
 ### MassModuleStore
 
@@ -727,7 +734,7 @@ Optional parameters (depending on mission type)
 - Count 
 - Target 
 - TargetType 
-- TargetFaction  
+- TargetFaction   
 - DestinationSystem 
 - DestinationStation 
 - DestinationSettlement 
@@ -751,47 +758,21 @@ _Reputation_ and _Influence _are a set of + indicators (eg "+++")
 
 Example:
 
+{ "timestamp":"2018-12-19T21:41:09Z", "event":"MissionCompleted", "Faction":"Inara Nexus", "Name":"Mission_Courier_Elections_name", "MissionID":442511682,
+
+"TargetFaction":"Tougeir Blue Clan", "DestinationSystem":"Tougeir", "DestinationStation":"Janes Dock", "Reward":10000, "FactionEffects":[
+
 ```
-{
-    "timestamp": "2018-12-19T21:41:09Z",
-    "event": "MissionCompleted",
-    "Faction": "Inara Nexus",
-    "Name": "Mission_Courier_Elections_name",
-    "MissionID": 442511682,
-    "TargetFaction": "Tougeir Blue Clan",
-    "DestinationSystem": "Tougeir",
-    "DestinationStation": "Janes Dock",
-    "Reward": 10000,
-    "FactionEffects": [{
-            "Faction": "Tougeir Blue Clan",
-            "Effects": [{
-                "Effect": "$MISSIONUTIL_Interaction_Summary_EP_up;",
-                "Effect_Localised": "The economic status of $#MinorFaction; has improved in the $#System; system.",
-                "Trend": "UpGood"
-            }],
-            "Influence": [{
-                "SystemAddress": 5067927397769,
-                "Trend": "UpGood",
-                "Influence": "++++"
-            }],
-            "ReputationTrend": "UpGood",
-            "Reputation": ""
-        },
-        {
-            "Faction": "Inara Nexus",
-            "Effects": [{
-                    "Effect": "$MISSIONUTIL_Interaction_Summary_EP_up;",
-                    "Effect_Localised": "The economic status of $#MinorFaction; has improved in the $#System; system.",
-                    "Trend": "UpGood"
-                }
-            ],
-            "Influence": [],
-            "ReputationTrend": "UpGood",
-            "Reputation": "+"
-        }
-    ]
-}
+{ "Faction":"Tougeir Blue Clan", "Effects":[{ "Effect":"$MISSIONUTIL_Interaction_Summary_EP_up;", "Effect_Localised":"The economic status of $#MinorFaction; has improved in the $#System; system.", "Trend":"UpGood" }
 ```
+
+], "Influence":[ { "SystemAddress":5067927397769, "Trend":"UpGood", "Influence":"++++" } ], "ReputationTrend":"UpGood", "Reputation":"" },
+
+```
+{ "Faction":"Inara Nexus", "Effects":[{ "Effect":"$MISSIONUTIL_Interaction_Summary_EP_up;", "Effect_Localised":"The economic status of $#MinorFaction; has improved in the $#System; system.", "Trend":"UpGood" }
+```
+
+], "Influence":[ ], "ReputationTrend":"UpGood", "Reputation":"+" } ] }
 
 Example of MaterialsReward:
 
@@ -1055,16 +1036,27 @@ Example: (in journal)
 
 (In separate file)
 
-```
 { "timestamp":"2017-10-05T10:11:38Z", "event":"Outfitting", "MarketID":128678535, "StationName":"Black Hide", "StarSystem":"Wyrd", "Horizons":true, "Items":[
-	{ "id":128049382, "Name":"hpt_pulselaser_fixed_medium", "BuyPrice":16731 },
-	{ "id":128049383, "Name":"hpt_pulselaser_fixed_large", "BuyPrice":66924 },
-	{ "id":128049385, "Name":"hpt_pulselaser_gimbal_small", "BuyPrice":6275 },
-	{ "id":128049386, "Name":"hpt_pulselaser_gimbal_medium", "BuyPrice":33653 },
-	{ "id":128049388, "Name":"hpt_pulselaser_turret_small", "BuyPrice":24717 },
-	{ "id":128681995, "Name":"hpt_pulselaser_gimbal_huge", "BuyPrice":834269 },
+
+{ "id":128049382, "Name":"hpt_pulselaser_fixed_medium", "BuyPrice":16731 },
+
+{ "id":128049383, "Name":"hpt_pulselaser_fixed_large", "BuyPrice":66924 },
+
+{ "id":128049385, "Name":"hpt_pulselaser_gimbal_small", "BuyPrice":6275 },
+
+{ "id":128049386, "Name":"hpt_pulselaser_gimbal_medium", "BuyPrice":33653 },
+
+{ "id":128049388, "Name":"hpt_pulselaser_turret_small", "BuyPrice":24717 },
+
+{ "id":128681995, "Name":"hpt_pulselaser_gimbal_huge", "BuyPrice":834269 },
+
+_:_
+
+_: (50 lines later)_
+
+_:_
+
 ] }
-```
 
 ### PayBounties
 
@@ -1147,21 +1139,7 @@ Parameters:
 Example:
 
 ```
-{
-	"timestamp": "2016-06-10T14:32:03Z",
-	"event": "RedeemVoucher",
-	"Type": "bounty",
-	"Factions": [
-		{
-			"Faction": "Ed's 38",
-			"Amount": 1000
-		},
-		{
-			"Faction": "Zac's Lads",
-			"Amount": 2000
-		}
-	]
-}
+{ "timestamp":"2016-06-10T14:32:03Z", "event":"RedeemVoucher", "Type":"bounty", Factions: [ { "Faction":"Ed's 38", "Amount":1000 }, { "Faction":"Zac's Lads", "Amount": 2000 } ] }
 ```
 
 ### RefuelAll
@@ -1251,6 +1229,7 @@ When written: when repairing everything
 Parameters:
 
 - Cost 
+-  
 
 
 ### RestockVehicle
@@ -1401,25 +1380,26 @@ The full price list is written to a separate file, in the same folder as the jou
 Example: in the Journal:
 
 ```
-{
-	"timestamp": "2017-10-04T10:01:38Z",
-	"event": "Shipyard",
-	"MarketID": 128122104,
-	"StationName": "Seven Holm",
-	"StarSystem": "Tamor"
-}
+{ "timestamp":"2017-10-04T10:01:38Z", "event":"Shipyard", "MarketID: 128122104, "StationName":"Seven Holm", "StarSystem":"Tamor", }
 ```
 
 In the separate shipyard.json file:
-```
-{ "timestamp":"2017-10-04T10:01:38Z", "event":"Shipyard", "MarketID": 128122104, "StationName":"Seven Holm", "StarSystem":"Tamor", "Horizons":true, "AllowCobraMkIV":true, "PriceList":[
-	{ "id":128049249, "ShipType":"sidewinder", "ShipPrice":24336 },
-	{ "id":128049255, "ShipType":"eagle", "ShipPrice":34071 },
-	{ "id":128049261, "ShipType":"hauler", "ShipPrice":40094 },
-	{ "id":128049267, "ShipType":"adder", "ShipPrice":66779 },
-	{ "id":128672138, "ShipType":"empire_eagle", "ShipType_Localised":"Imperial Eagle", "ShipPrice":84283 },
+
+{ "timestamp":"2017-10-04T10:01:38Z", "event":"Shipyard", "MarketID: 128122104, "StationName":"Seven Holm", "StarSystem":"Tamor", "Horizons":true, "AllowCobraMkIV":true, "PriceList":[
+
+{ "id":128049249, "ShipType":"sidewinder", "ShipPrice":24336 },
+
+{ "id":128049255, "ShipType":"eagle", "ShipPrice":34071 },
+
+{ "id":128049261, "ShipType":"hauler", "ShipPrice":40094 },
+
+{ "id":128049267, "ShipType":"adder", "ShipPrice":66779 },
+
+{ "id":128672138, "ShipType":"empire_eagle", "ShipType_Localised":"Imperial Eagle", "ShipPrice":84283 },
+
+:
+
 ] }
-```
 
 ### ShipyardBuy
 
@@ -1582,9 +1562,11 @@ Parameters:
 
 The InTransit value only appears (with value true) if the module is being transferred. In this case, the system, market, transfer cost and transfer time are not written.
 
-```
 { "timestamp":"2018-01-31T10:55:16Z", "event":"StoredModules", "MarketID":128676487, "StationName":"Farseer Inc", "StarSystem":"Deciat", "Items":[
+
 { "Name":"$int_engine_size3_class5_name;", "Name_Localised":"Thrusters", "StorageSlot":57, "StarSystem":"Deciat", "MarketID":128676487, "TransferCost":0, "TransferTime":0, "BuyPrice":495215, "Hot":false, "EngineerModifications":"Engine_Dirty", "Level":1, "Quality":0.000000 },
+
+```
 { "Name":"$int_hyperdrive_size6_class5_name;", "Name_Localised":"FSD", "StorageSlot":59, "StarSystem":"Shinrarta Dezhra", "MarketID":128666762, "TransferCost":79680, "TransferTime":1317, "BuyPrice":12620035, "Hot":false, "EngineerModifications":"FSD_LongRange", "Level":5, "Quality":0.000000 } ] }
 ```
 
@@ -1611,12 +1593,12 @@ Parameters:
 	- Hot 
 
 
-- If the ship is in transit:
+If the ship is in transit:
 
 - InTransit: true 
 
 
-- If the ship is not in transit:
+If the ship is not in transit:
 
 	- StarSystem 
 	- ShipMarketID 
@@ -1727,22 +1709,22 @@ When written: When clearing the impound off of one of your ships.
 
 Parameters:
 
-- ShipType
-- ShipID
-- ShipMarketID: The market the ship is stored at
-- MarketID: Your current market
+- ShipType 
+- ShipID 
+- ShipMarketID:The market the ship is stored at 
+- MarketID:Your current market 
 
 
 Example:
 
 ```
 {
-	"timestamp":"2022-11-18T16:19:48Z",
-	"event":"ClearImpound", 
-	"ShipType":"asp",
-	"ShipType_Localised":"Asp Explorer",
-	"ShipID":10,
-	"ShipMarketID":128833431,
-	"MarketID":128833431 
+	"timestamp": "2022-11-18T16:19:48Z",
+	"event": "ClearImpound",
+	"ShipType": "asp",
+	"ShipType_Localised": "Asp Explorer",
+	"ShipID": 10,
+	"ShipMarketID": 128833431,
+	"MarketID": 128833431
 }
 ```
