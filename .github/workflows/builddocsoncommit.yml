@@ -24,8 +24,14 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
-      - run: node ./build.js
-      - run: mkdocs build
+      - name: Install pnpm
+        run: npm add -g pnpm
+      - name: Install node deps
+        run: pnpm install
+      - name: Building markdown docs
+        run: node ./build.js
+      - name: Generating site
+        run: mkdocs build
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           # Optional. Commit message for the created commit.
