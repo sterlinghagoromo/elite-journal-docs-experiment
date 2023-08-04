@@ -22,3 +22,8 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material 
       - run: mkdocs build
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Automated Doc Rebuild
