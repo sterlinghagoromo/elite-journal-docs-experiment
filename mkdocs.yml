@@ -1,9 +1,38 @@
-site_name: Elite Dangerous Player Journal
+site_name: Elite Dangerous Player Log Journal
 
-theme: material
-
-extra_css: 
+extra_css:
     - custom.css
+
+theme:
+    name: material
+    features:
+        - tables
+        - content.tooltips
+        - content.code.copy
+        - navigation.footer
+        - navigation.instant
+        - navigaiton.tracking
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.top
+        - toc.follow
+    palette:
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
+
+    plugins:
+        - search
 
 nav:
     - Introduction: index.md
@@ -21,3 +50,17 @@ nav:
     - Other Events.md
     - Status File.md
     - Appendix.md
+
+markdown_extensions:
+    - abbr
+    - admonition
+    - attr_list
+    - def_list
+    - footnotes
+    - attr_list
+    - pymdownx.superfences
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.tilde
